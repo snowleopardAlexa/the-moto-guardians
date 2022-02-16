@@ -21,7 +21,6 @@ min-height: ${({ minHeight }) => (minHeight ? minHeight : 'auto')};
 
 export const Container = styled.div `
 width: 100%;
-max-width: 1300px;
 margin-right: auto;
 margin-left: auto;
 padding: 0 50px;
@@ -33,7 +32,7 @@ background: ${({ inverse }) => (inverse ? '#880808' : '#fff')};
 `;
 
 export const ContentRow = styled.div `
-display: flex;
+    display: flex;
 	margin: 0 -15px -15px -15px;
 	flex-wrap: wrap;
 	align-items: center;
@@ -45,7 +44,7 @@ display: flex;
 	}
 `;
 
-export const Img = styled.div `
+export const Img = styled.img `
 padding-right: 0;
 border: 0;
 max-width: 100%;

@@ -1,23 +1,25 @@
-import { Section, Container, ContentRow, Img, ContentColumn, TextWrapper, Heading, Subtitle, ContentButton, ImgWrapper } from 'styled-components';
+import { Section, Container, ContentRow, Img, ContentColumn, TextWrapper, Heading, Subtitle, ContentButton, ImgWrapper } from './ContentStyles';
 
-const Content = () => {
+const Content = ({ img, headline, description, buttonLabel, inverse, big, reverse }) => {
   return (
-     <Section>
+     <Section inverse={inverse}>
        <Container>
-         <ContentRow>
-           <Img />
-         </ContentRow>
-         <ContentRow>
+         <ContentRow reverse={reverse}>
            <ContentColumn>
              <TextWrapper>
-               <Heading></Heading>
-               <Subtitle></Subtitle>
+               <Heading>{headline}</Heading>
+               <Subtitle>{description}</Subtitle>
              </TextWrapper>
-             <ContentButton></ContentButton>
+             <ContentButton
+               inverse={inverse}
+               big={big}
+             >
+               {buttonLabel}
+             </ContentButton>
            </ContentColumn>
            <ContentColumn>
              <ImgWrapper>
-               <Img />
+               <Img src={img}/>
              </ImgWrapper>
            </ContentColumn>
          </ContentRow>

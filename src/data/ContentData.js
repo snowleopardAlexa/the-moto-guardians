@@ -1,31 +1,18 @@
 export const heroOne = {
-	reverse: false,
-	inverse: false,
-	topLine: {
-		text: 'Taste our strawberries and raspberries...',
-	},
-	headline: "CRUELA might have a cold heart, but she has a taste!",
-	description: 'Fabulous shoes for a passionate lady.',
-	buttonLabel: 'SHOES',
-	imgStart: 'start',
-	img: './assets/img.woman.jpg',
-	start: 'true',
+	img: './assets/woman.jpg',
 };
 
 
 export const heroTwo = {
 	reverse: true,
 	inverse: true,
-	topLine: {
-		text: 'A perfect party dress',
-	},
 	headline: 'SHOW THEM your wilderness and elegance',
 	description: 'Dresses for any occasion might suprise you.',
 	buttonLabel: 'DRESSES',
 
 	linkTo: '/more',
 	imgStart: 'start',
-	img: './assets/img/moto1.jpg',
+	img: './assets/moto1.jpg',
 	start: 'true',
 };
 
@@ -40,6 +27,6 @@ export const heroThree = {
 	buttonLabel: 'LINGERINE',
 	linkTo: '/download',
 	imgStart: '',
-	img: './assets/img/moto2.jpg',
+	img: './assets/moto2.jpg',
 	start: 'true',
 };
