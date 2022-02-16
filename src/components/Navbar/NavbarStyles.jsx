@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { mediaQueries } from '.././responsiveStyles';
 
 export const Container = styled.div `
@@ -10,7 +11,7 @@ export const Container = styled.div `
 `;
 
 export const NavWrapper = styled.div `
-   padding: 10px 20px;
+   padding: 0px 20px;
    display: flex;
    justify-content: space-between;
    ${mediaQueries("md")`
@@ -26,6 +27,8 @@ export const NavLeft = styled.div `
 
 export const Logo = styled.h1 `
    font-weight: bold;
+   color: white;
+   font-family: 'Staatliches', cursive;
    ${mediaQueries("md")`
      font-size: 18px;
      margin-top: 5px;
@@ -41,13 +44,18 @@ export const NavRight = styled.div `
   `}
 `;
 
-export const MenuItem = styled.div `
-   font-size: 1rem;
-   margin-top: 7px;
-   cursor: pointer;
-   margin-left: 25px;
+export const MenuItem = styled(Link) `
+   font-family: 'Maven Pro', sans-serif;
+   font-size: 1.2rem;
+   font-weight: 500;
+   text-decoration: none;
+   display: flex;
+   align-items: center;
+   color: white;
+   margin: 0px 5px 5px 20px;
    ${mediaQueries("md")`
      font-size: 12px;
      margin-left: 10px;
   `}
 `;
+
