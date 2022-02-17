@@ -4,6 +4,7 @@ import MissionContent from '../../components/MissionContent/MissionContent';
 import { introOne } from "../../data/IntroData";
 import Content from '../../components/Content/Content';
 import { heroOne, heroTwo } from "../../data/ContentData";
+import Footer from '../../components/Footer/Footer';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
      <MissionContent />
      <Content {...heroOne} />
      <Content {...heroTwo} />
+     <Footer />
     </>
   );
 };
