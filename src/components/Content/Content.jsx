@@ -1,30 +1,44 @@
-import { Section, Container, ContentRow, Img, ContentColumn, TextWrapper, Heading, Subtitle, ContentButton, ImgWrapper } from './ContentStyles';
+import {
+  Intro,
+  IntroLeft,
+  IntroLeftWrapper,
+  TitleIntro,
+  SubtitleIntro,
+  DescIntroText,
+  SocialIconLink,
+  SocialIconText,
+  IntroSide,
+  IntroRight,
+  IntroImgWrapper,
+  Img,
+  Button
+} from "./ContentStyles";
 
-const Content = ({ img, headline, description, buttonLabel, inverse, big, reverse }) => {
+//import { Link } from "react-router-dom";
+
+const Content = ({ img, inverse, reverse, headline, subtitle, description, buttonLabel, start }) => {
   return (
-     <Section inverse={inverse}>
-       <Container>
-         <ContentRow reverse={reverse}>
-           <ContentColumn>
-             <TextWrapper>
-               <Heading>{headline}</Heading>
-               <Subtitle>{description}</Subtitle>
-             </TextWrapper>
-             <ContentButton
-               inverse={inverse}
-               big={big}
-             >
-               {buttonLabel}
-             </ContentButton>
-           </ContentColumn>
-           <ContentColumn>
-             <ImgWrapper>
-               <Img src={img}/>
-             </ImgWrapper>
-           </ContentColumn>
-         </ContentRow>
-       </Container>
-     </Section>
+    <Intro inverse={inverse}>
+      <IntroSide>
+      <IntroLeft reverse={reverse}>
+        <IntroLeftWrapper>
+          <TitleIntro>{headline}</TitleIntro>
+          <SubtitleIntro>{subtitle}</SubtitleIntro>
+          <DescIntroText>{description}</DescIntroText>
+          <Button>
+         
+              {buttonLabel}
+        
+          </Button>
+        </IntroLeftWrapper>
+      </IntroLeft>
+      <IntroRight>
+        <IntroImgWrapper start={start}>
+         <Img src={img} />
+        </IntroImgWrapper>
+      </IntroRight>
+      </IntroSide>
+    </Intro>
   );
 };
 

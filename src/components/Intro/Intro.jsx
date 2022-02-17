@@ -1,20 +1,18 @@
 import { Container, IntroRow, IntroColumn, ImgWrapper, Img } from './IntroStyles';
 
-export const Intro = ({ src }) => {
+const Intro = ({ img }) => {
   return (
     <Container>
         <IntroRow>
             <IntroColumn>
-               <ImgWrapper>
-                 <Img src={src} />
-               </ImgWrapper>
-            </IntroColumn>
-            <IntroColumn>
-            <ImgWrapper>
-                 <Img src={src} />
-               </ImgWrapper>
+             <ImgWrapper>
+               <Img src={img} />
+             </ImgWrapper>
             </IntroColumn>
         </IntroRow>
     </Container>
-  )
-}
+  );
+};
+
+export default Intro;
+
